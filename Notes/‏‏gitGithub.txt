@@ -1,0 +1,24 @@
+git config --global user.email "sahar.t118@gmail.com"
+
+ git config --global user.name "sahar118"
+
+cd Desktop/test/
+
+git init
+
+git status 
+
+(if I wants to add a text) 
+touch name.txt
+git status 
+
+git add name.txt (or the name of the file)
+
+
+git status 
+
+git commit -m "added name.txt"
+
+git add . 
+
+git status 
