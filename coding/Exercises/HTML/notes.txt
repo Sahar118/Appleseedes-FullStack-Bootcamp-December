@@ -1,1 +1,25 @@
-Notes
+
+<em> 
+<br> לרדת שורה 
+<br> / < strong> for bold font.
+<hr> line across the stream
+<del> delet
+
+to add a link:
+אתר חצוני:
+<a href=" " target:"_blanck" > לפתוח עמוד חדש
+
+קישור פנימי
+<a href:"/">
+
+to add an image:
+<img href"">
+
+table:
+
+<thead> <th> table head
+<tbody> <th>
+
+<ul>
+<li>
+<ol type:" 1 / a / i">
