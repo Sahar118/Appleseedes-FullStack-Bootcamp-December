@@ -1,1 +1,36 @@
-Notes
+line-heigth מהרווח בין השורות 
+
+font-weight bold 
+
+font-style: atalic נטוי 
+
+************************************************
+
+אתרי צבעים
+color-hex.com  
+htmlcolorcodes.com
+
+************************************************
+
+border-width עובי שלו 
+border-color 
+border-style: solid dashed 
+
+במקום לכתוב שלושה אפשר לכתוב את זה כך:
+border: 3px solid red;
+
+border-top: 4px solid blue; רק מלמעלה 
+
+:10px border-top-right-radies
+
+************************************************
+
+background-repeat:no-repeat
+back-ground-position: -100px 100px;
+background-size:cover כך התמונה תמלא את כל המסך 
+
+ואפשר לכתוב את זה בפקודה אחת 
+backgrpund: url() no repeat center center/cover;
+
+background-attatchment:fixed; כאשר אנחנו עולים או יורדים במסך תמונת הרקע זזה גם 
+
