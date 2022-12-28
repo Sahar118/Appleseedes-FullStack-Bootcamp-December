@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/17256ed60f.js" crossorigin="anonymous"></script>
+    <title>اهلا وسهلا بكم في فندق دبي | الأتصال بنا </title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1 class="logo"><a href="./index.html"> دبي</a></h1>
+                <ul>
+                    <li><a href="./index.html">الصفحة الرئيسية </a></li>
+                    <li><a href="./about.html"> من نحن </a></li>
+                    <li><a class="current" href="./contant.html"> الأتصال بنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="contact-form" class="py-3">
+        <div class="container">
+            <h1 class="l-heading"> <span class="text-primary"> الأتصال</span> بنا </h1>
+            <p>الرجاء املأ المعلومات التالية</p>
+            <form action="process.php">
+                <div class="form-group">
+                    <label for="name"> الاسم</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="email"> البريد الالكتروني</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="message"> الرسالة</label>
+                    <textarea type="text" name="message" id="message"> </textarea>
+                </div>
+                <button type="submit" class="btn"> الارسال</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact-info" class="bg-dark py-1">
+        <div class="box bg-light">
+            <i class="fa-solid fa-hotel fa-3x"></i>
+            <h3> الموقع </h3>
+            <p> دبي, الإمارات العربية المتحدة
+            </p>
+        </div>
+        <div class="box bg-primary">
+            <i class="fa-solid fa-phone fa-3x"></i>
+            <h3> رقم الهاتف</h3>
+            <p> (617)555-555-5555 </p>
+        </div>
+        <div class="box bg-light">
+            <i class="fa-solid fa-envelope fa-3x"></i>
+            <h3>البريد الالكتروني</h3>
+            <p> hotel@hotel.com</p>
+        </div>
+    </section>
+    <div class="clr">
+        <div>
+
+        </div>
+    </div>
+
+    </section>
+    <footer id="main-footer">
+        <p> فندق دبي &copy; 2022 جميع الحقوق محفوظة </p>
+    </footer>
+</body>
+
+</html>
