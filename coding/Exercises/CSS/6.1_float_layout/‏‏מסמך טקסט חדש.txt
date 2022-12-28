@@ -1,0 +1,2 @@
+the margin is the outside of the element, and the padding is indise it.
+

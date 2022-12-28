@@ -1,0 +1,22 @@
+/* 1. explain in your own words what is the problem. */
+/* becouse the absolute it pertains to its parent element, so if we 
+want to put div in other div, we have to make the inner divs absolute and the outer 
+or the parent relative.
+in this exampke we make the inner absolute but the outer we didn't make the outer position relative */
+
+/* 2. fix the code using the positions we’ve learned. */
+
+#outer {
+    width: 100px;
+    height: 100px;
+    background: darkcyan;
+    margin: 50px;
+    position: relative;
+    }
+    #inner {
+    width: 50px;
+    height: 50px;
+    background: lightgreen;
+    position: absolute;
+    top: 10px;
+    }

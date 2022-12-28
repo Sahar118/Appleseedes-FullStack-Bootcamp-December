@@ -1,0 +1,43 @@
+.div1 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 50px;
+    position: relative;
+    background-color: aliceblue;
+    }
+.div2 {
+    width: 100px;
+    height: 160px;
+    border: 1px solid black;
+    margin: 50px;
+    left: 70px;
+    bottom: 150px;
+    position: relative;
+    /* z-index: 2; */
+    background-color: aliceblue;
+
+    }
+.div3 {
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 50px;
+    bottom: 250px;
+    position: relative;
+    background-color: aliceblue;
+
+    }
+    
+.div4 {
+    width: 100px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 50px;
+    z-index: 1;
+    bottom: 570px;
+    left: 300px;
+    position: relative;
+    background-color: aliceblue;
+
+    }
