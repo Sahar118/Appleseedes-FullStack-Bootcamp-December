@@ -1,0 +1,76 @@
+
+@media (max-width: 768px){    
+    
+    /* <------------------- Home ----------> */
+#navbar h1{
+    float: none;
+    text-align: center;
+}
+
+#navbar ul, #navbar ul li{
+    float: none;
+
+}
+
+#navbar ul li a{
+    border-bottom: #444 dotted 1px;
+    text-align: center;
+
+}
+
+
+/* Home info */
+
+#home-info .info-img{
+    display: none;
+}
+
+#home-info .info-content{
+    float: none;
+    width: 100%;
+}
+
+/* Boxes */
+
+.box{
+    float: none;
+    width: 100%;
+}
+
+    /* <------------------- about----------> */
+
+
+    #about-info .info-right,
+    #about-info .info-left{
+        float: none;
+        width: 100%;
+    }
+    
+    .l-heading{
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    #about-info .info-right{
+        margin-top: 30px;
+    }
+
+    #about-info .info-left img{
+       width: 30%;
+    }
+
+    p .p-leading{
+        font-size: 18px;
+    }
+
+    #contact-info .box{
+        border-bottom: #444 dotted 1px;
+    }
+
+    /* showCase */
+    #showcase .showcase-content{
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+
+}

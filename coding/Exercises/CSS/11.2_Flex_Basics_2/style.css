@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+
+}
+
+body{
+
+    height: 100vh;
+}
+.item{
+    
+    text-align: center;
+    padding: 40px;
+    height: 50px;
+    width: 50px;
+}
+
+
+/* it looks like the image by using space between */
+.flex-container{
+    background-color: wheat;
+    display: flex;
+    height: 50vh;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items: flex-end;
+    
+
+}
+.item-1{
+background-color: green;
+}
+
+.item-2{
+    background-color: blue;
+    }
+
+.item-3{
+    background-color: red;
+    }
