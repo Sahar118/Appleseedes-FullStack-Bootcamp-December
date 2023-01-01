@@ -1,0 +1,24 @@
+body{
+    background-color: palevioletred;
+}
+
+p{
+    font-size: 20px;
+    color: rebeccapurple;
+
+}
+
+@media (max-width:600px) {
+    p{
+        font-size: 55px;
+    }
+}
+
+
+@media (max-width:900px) {
+    p{
+        font-size: 35px;
+    }
+}
+
+
