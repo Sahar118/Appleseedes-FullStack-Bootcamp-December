@@ -13,6 +13,12 @@ body{
 
 }
 
+.navbar{
+    background-color: yellowgreen;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+}
 .container{
     display: flex;
     /* background-color: brown; */
@@ -21,12 +27,6 @@ body{
     flex-direction: row;
     align-items: flex-start;
 
-}
-.navbar{
-    background-color: yellowgreen;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    display: flex;
 }
 
 ul{
@@ -47,7 +47,7 @@ p{
 }
 
 
-@media (max-width:665px){
+@media (max-width:765px){
 
     
 .container{

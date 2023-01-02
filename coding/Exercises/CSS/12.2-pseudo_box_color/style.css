@@ -1,0 +1,20 @@
+
+.box-1{
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    position: relative;
+}
+
+.box-1::before{
+    content: ' ';
+    position: absolute;
+    background-color: blueviolet;
+    width: 150px;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+
+}
