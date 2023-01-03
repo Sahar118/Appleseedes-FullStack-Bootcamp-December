@@ -1,0 +1,37 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box{
+    background-color: palevioletred;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box::after{
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    background-color: violet;
+    position: absolute;
+    transform:scaleX(100%);
+    animation: animate1 5s infinite 1s ease-in-out;
+    right: 100px;
+
+}
+
+@keyframes animate1{
+    from{
+        right: 0;
+    }
+
+    to{
+        right: 100%;
+    }
+}

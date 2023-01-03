@@ -1,0 +1,162 @@
+:root{
+    
+    --text--color: gray;
+    --title--color:#333;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.container{
+    display: flex;
+    
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+.navbar  ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.navbar li{
+    padding: 10px;
+    color: var(--text--color);
+ }
+
+ .navbar p{
+    padding: 20px;
+    color: var(--text--color);
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+
+#showcase{
+    height:100vh;
+    background: url(./photo-1428908728789-d2de25dbd4e2.avif) no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0 20px;
+    
+}
+
+#showcase h1{
+    font-size: 50px;
+    line-height: 1.2;
+    color: var(--title-color);
+}
+
+#showcase p{
+    font-size: 20px;
+    
+
+}
+
+#showcase  .button{
+    font-size: 18px;
+    text-decoration: none;
+    color:var(--text--color);
+    border: 1px solid var(--text--color);
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#showcase  .button:hover{
+    background-color:  var(--text--color);
+    color: white;
+}
+
+
+@media (max-width:900px){
+
+    #showcase h1{
+        font-size: 30px;
+        line-height: 1.2;
+        color: purple;
+    
+    }
+    
+    #showcase p{
+        font-size: 20px;
+        color: blueviolet;
+        
+    
+    }
+    
+    #showcase  .button{
+        font-size: 18px;
+        text-decoration: none;
+        color: purple;
+        border: 1px solid  purple;
+        padding: 10px 30px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    #showcase  .button:hover{
+        background-color:purple;
+        color: white;
+    }
+    
+    
+}
+
+
+@media (max-width:600px){
+
+    #showcase h1{
+        line-height: 2;
+        font-size: 40px;
+        color: palevioletred;
+    
+    }
+    
+    #showcase p{
+        font-size: 20px;
+        color: pink;
+        margin: 10px;
+
+        
+    
+    }
+    
+    #showcase  .button{
+        font-size: 18px;
+        color: palevioletred;
+        border: 1px solid  palevioletred;
+  
+    }
+
+    #showcase  .button:hover{
+        background-color: palevioletred;
+        color: white;
+    }
+    
+    
+}
