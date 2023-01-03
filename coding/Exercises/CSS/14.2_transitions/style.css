@@ -1,0 +1,80 @@
+*{
+   box-sizing: border-box;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+div{
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+
+}
+.button{
+    padding: 10px 20px;
+    border: 2px solid black;
+    
+}
+
+.translate-y{
+    background: white;
+    transition:  ease-out 0.2s ;
+    box-shadow: inset 0 0 0 red;
+    
+}
+
+.translate-y:hover{
+    box-shadow: inset 0px 120px 0 red;
+}
+
+.translate-x{
+    transition:  ease-out 0.2s ;
+    box-shadow: inset 0 0 0 blue;
+}
+
+.translate-x:hover{
+    box-shadow: inset 120px 0px 0 blue;
+}
+
+
+/* .rotate{
+    transition:  ease-out 1s ;
+    box-shadow: inset 0 0 0 blue;
+}
+
+.rotate:hover{
+    box-shadow: inset 50px 180px 0px blue;
+    transform: rotate(90deg);
+    
+} */
+
+.rotate{
+
+    background-color: palevioletred;
+    position: relative;
+    /* overflow: hidden; */
+    transition:  ease-out 1s ;
+    
+}
+.rotate::before{
+    content: ' ';
+    height: 100%;
+    width: 100%;
+    background-color: violet;
+    position: absolute;
+    transform: scale(100%, 100%);
+    left: -100%;
+    transition:  ease-out 1s ;
+    box-shadow: inset 0 0 0 blue;
+    top: -35px;}
+
+.rotate:hover::before{
+    box-shadow: inset 120px 0px 0 blue;
+}
