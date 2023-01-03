@@ -1,6 +1,5 @@
 *{
-   box-sizing: border-box;
-
+    box-sizing: border-box;
 }
 body{
     height: 100vh;
@@ -23,44 +22,60 @@ div{
     
 }
 
+/*------------------- Translate Y -------------------*/
 .translate-y{
-    background: white;
-    transition:  ease-out 0.2s ;
-    box-shadow: inset 0 0 0 red;
-    
+    overflow: hidden;
+    position: relative;
 }
 
-.translate-y:hover{
-    box-shadow: inset 0px 120px 0 red;
+.translate-y::before{
+    transition:all .5s;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: violet;
+    transform: translateY(1);
+    top: -40px;
+    left: 0px;
+
+
 }
+.translate-y:hover::before{
+    content: 'COOOOOOL!!';
+    transform: translateY(100%);
+}
+
+/*------------------- Translate X -------------------*/
 
 .translate-x{
-    transition:  ease-out 0.2s ;
-    box-shadow: inset 0 0 0 blue;
+    overflow: hidden;
+    position: relative;
 }
 
-.translate-x:hover{
-    box-shadow: inset 120px 0px 0 blue;
+.translate-x::before{
+    transition:all .5s;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 105%;
+    background-color: violet;
+    transform: translateX(0);
+    top: 0px;
+    left: -125px;
+
+
+}
+.translate-x:hover::before{
+    content: 'COOOOOOL!!';
+    transform: translateX(100%);
 }
 
-
-/* .rotate{
-    transition:  ease-out 1s ;
-    box-shadow: inset 0 0 0 blue;
-}
-
-.rotate:hover{
-    box-shadow: inset 50px 180px 0px blue;
-    transform: rotate(90deg);
-    
-} */
+/*------------------- Rotate -------------------*/
 
 .rotate{
-
-    background-color: palevioletred;
     position: relative;
-    /* overflow: hidden; */
-    transition:  ease-out 1s ;
+    overflow: hidden;
     
 }
 .rotate::before{
@@ -69,12 +84,78 @@ div{
     width: 100%;
     background-color: violet;
     position: absolute;
-    transform: scale(100%, 100%);
-    left: -100%;
-    transition:  ease-out 1s ;
-    box-shadow: inset 0 0 0 blue;
-    top: -35px;}
+    transform: rotate(90deg);
+    transform-origin:left bottom ;
+    left:0px;
+    top: 0px;
+    transition:all .5s;
+    
+    }
 
-.rotate:hover::before{
-    box-shadow: inset 120px 0px 0 blue;
+
+    .rotate:hover::before{
+    transform: rotate(0deg);
+    content: 'hello';
+
 }
+
+/*------------------- skew -------------------*/
+.skew{
+    position: relative;
+
+    
+}
+.skew::before{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: skewY(0deg);
+    transform-origin:left bottom ;
+    left:0px;
+    top: 0px;
+    transition:all .5s;
+    content: '';
+
+}
+
+
+.skew:hover::before{
+    content: 'skew';
+    background-color: violet;
+    border: black solid 2px;
+    transform: skewY(20deg);
+}
+
+
+
+/*------------------- scale -------------------*/
+
+.scale{
+    display: flex;
+    position: relative;
+    /* overflow: hidden; */
+    
+}
+.scale::before{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform: scale(0, 50%,0 ,50% );
+    left:0px;
+    top: 0px;
+    transition:all 1s;
+    content: '';
+}
+
+
+.scale:hover::before{
+    content: 'Scale';
+    text-align: center; 
+    color:white;
+    background-color: black;
+    border: black solid 2px;
+    transform: scale(0);
+}
+
