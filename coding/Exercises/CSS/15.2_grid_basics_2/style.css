@@ -1,0 +1,42 @@
+.grid-container{
+    display: grid;
+    grid-template-areas:
+    'box-1 box-1 box-1 box-1'
+    'box-2 box-2 box-3 box-3'
+    'box-2 box-2 box-4 box-5';
+
+    grid-gap: 1rem;
+    height: 300px;
+    width: 400px;
+}
+
+.item{
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.item-1{
+    grid-area: box-1;
+    background-color:red;
+}
+.item-2{
+    grid-area: box-2;
+    background-color:blue;
+}
+
+.item-3{
+    grid-area: box-3;
+    background-color:green;
+}
+
+.item-4{
+    grid-area: box-4;
+    background-color: purple
+}
+.item-5{
+    grid-area: box-5;
+    background-color:purple;
+}
+
