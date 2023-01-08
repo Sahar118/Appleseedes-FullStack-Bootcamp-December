@@ -14,6 +14,11 @@
 // Create a function that will return a string in the following format:
 // `Today is Sunday the 31 of January 2021’
  
-
+function getCurrentDay(){
 const date2 = new Date('January 31, 2021');
-console.log(`Today is ${date2.toDateString()}`);
+let theDay = date2.toDateString();
+console.log(`Today is ${theDay}!`);
+}
+getCurrentDay()
+
+
