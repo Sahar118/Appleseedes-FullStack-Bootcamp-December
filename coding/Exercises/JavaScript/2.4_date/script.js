@@ -14,11 +14,29 @@
 // Create a function that will return a string in the following format:
 // `Today is Sunday the 31 of January 2021’
  
-function getCurrentDay(){
-const date2 = new Date('January 31, 2021');
-let theDay = date2.toDateString();
-console.log(`Today is ${theDay}!`);
-}
-getCurrentDay()
 
+
+// function getCurrentDay(){
+// const date2 = new Date('January 31, 2021');
+// let theDay = date2.toDateString();
+// console.log(`Today is ${theDay}!`);
+// }
+// getCurrentDay();
+
+
+
+
+const getCurrentDay =() =>{
+    const now = new Date();
+    const options ={weekday:'long', year:'numeric', month: 'long', day:'numeric'};
+    const dayString = now.toLocaleDateString('en-US', options);
+    return `Today is ${dayString}!`;
+}
+
+// way 1 to call the function 
+getCurrentDay();
+
+// way 2 to call the function 
+const callFunc = getCurrentDay();
+console.log(callFunc);
 
