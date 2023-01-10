@@ -1,24 +1,44 @@
 
-function teamWins (a ,b) {
+// function teamWins (a ,b) {
 
-    const JohnsTeam = (a, b, c) => (a+b+c)/JohnsTeam.length;
-    JohnsTeam(89, 120, 103);
+//     const JohnsTeam = (a, b, c) => (a+b+c)/JohnsTeam.length;
+//     JohnsTeam(89, 120, 103);
 
-    const MikesTeam = (a, b, c) => (a+b+c)/MikesTeam.length;
-    MikesTeam(116, 94, 123);
+//     const MikesTeam = (a, b, c) => (a+b+c)/MikesTeam.length;
+//     MikesTeam(116, 94, 123);
 
 
-    if (JohnsTeam > MikesTeam) {
-        console.log(' The Winner Is Johns Team 🎉');
-    }
-    else if (JohnsTeam < MikesTeam) {
-        console.log(' The Winner Is Mikes Team 🎉');
-    }
-    else  {console.log(' Its DrawwWw !!!!! 🎉');}
-}
+//     if (JohnsTeam > MikesTeam) {
+//         console.log(' The Winner Is Johns Team 🎉');
+//     }
+//     else if (JohnsTeam < MikesTeam) {
+//         console.log(' The Winner Is Mikes Team 🎉');
+//     }
+//     else  {console.log(' Its DrawwWw !!!!! 🎉');}
+// }
 
-teamWins();
+// teamWins();
 
+
+// function teamWins (a ,b) {
+
+//     const JohnsTeam = (a, b, c) => (a+b+c)/JohnsTeam.length;
+//     JohnsTeam(89, 120, 103);
+
+//     const MikesTeam = (d, e, f) => (d+e+f)/MikesTeam.length;
+//     MikesTeam(116, 9, 123);
+
+
+//     if (JohnsTeam > MikesTeam) {
+//         console.log(' The Winner Is Johns Team 🎉');
+//     }
+//     else if (JohnsTeam < MikesTeam) {
+//         console.log(' The Winner Is Mikes Team 🎉');
+//     }
+//     else  {console.log(' Its DrawwWw !!!!! 🎉');}
+// }
+
+// teamWins();
 
 // function teamWins (a ,b, c) {
     
@@ -52,3 +72,15 @@ teamWins();
 // }
 
 // teamWins();
+
+
+
+let JohnsTeam = (a, b, c) => (a+b+c)/JohnsTeam.length;
+let JohnsTeamAv= console.log(JohnsTeam(89, 120, 103));
+
+let MikesTeam = (d, e, f) => (d+e+f)/MikesTeam.length;
+let MikesTeamAv=console.log(MikesTeam(116, 94, 123));
+
+let averageWinner=Math.max(MikesTeamAv, JohnsTeamAv);
+console.log(averageWinner);
+
