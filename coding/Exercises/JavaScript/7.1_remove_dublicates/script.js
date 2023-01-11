@@ -1,5 +1,16 @@
 
-const beasts =[3,4,4,3,6,3];
 
-console.log(beasts.slice(1, 2,3));
+
+let ArrayIntegers = [3,4,4,3,6,3];
+let newArray = ArrayIntegers.filter((a, b) =>{
+    return ArrayIntegers.indexOf(a)===b;
+});
+console.log(newArray);
+
+
+// let ArrayIntegers2 = [3,4,4,3,6,3];
+// let newArray2 = ArrayIntegers.filter((a, b) =>{
+//     return ArrayIntegers.indexOf(a)!== b;
+// });
+// console.log(newArray2);
 
