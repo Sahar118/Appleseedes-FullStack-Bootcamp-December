@@ -49,7 +49,7 @@ console.log(arr2);
 
 let oldArray = [1, 2, 3, 4, 5];
 
-let newArray = oldArray.slice();
+let newArray = oldArray.slice(2,5);
 newArray.push(1);
 console.log({newArray});
 console.log({oldArray});
