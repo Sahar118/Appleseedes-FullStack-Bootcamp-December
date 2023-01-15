@@ -13,3 +13,6 @@ const obj1={
     return obj2;
  }
  console.log(objectIteration(obj1));
+
+
+ 
