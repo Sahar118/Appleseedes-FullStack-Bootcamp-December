@@ -3,8 +3,8 @@ const food = ["Noodle", "Pasta", "Ice-cream",
 const food1 = ["Fries", "Ice-cream", "Pizza",
 "Olives", "Hamburgers"];
 
-for (var i = 0; i < food.length; i++) {
-    for (var j = 0; j < food1.length; j++) {
+for (let i = 0; i < food.length; i++) {
+    for (let j = 0; j < food1.length; j++) {
         if (food[i] == food1[j]) {
             console.log(food[i]);
         }
