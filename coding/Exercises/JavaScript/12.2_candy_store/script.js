@@ -16,3 +16,50 @@ const candyStore = {
     cashRegister: 200
     }
     
+    // function getCandy(candyStore, id){
+    //     let result = candyStore.candies.filter(candy => {
+    //         return candy.id.includes(id)
+    //     })
+    //     console.log(result.id);
+    //     }; 
+    //     getCandy(candyStore, 'as12f');
+
+
+
+
+    // function getCandy(candyStore, id){
+    //     let result = candyStore.candies.filter(candy => {
+    //         const price= candy.price;
+    //         if(candy.id.includes(id)){
+    //             console.log(price);
+    //         }
+
+    //     })
+    //     console.log(result.id);
+    //     }; 
+        
+    //     getCandy(candyStore, 'as12f');
+
+
+        function addCandy(candyStore, id, name, price){
+
+            const result  = candyStore.candies.filter(()=>{
+              candyStore.candies.push({name:name,id:id,price:1});
+              
+              //*  console.log(arr)
+            });
+            console.log(candyStore.candies) 
+            
+        };
+        addCandy(candyStore,'aa','kinder',2)
+        
+        function buy(candyStore, id){
+            const result  = candyStore.candies.find(candy=>{
+               if(candy.id==id){
+                  candyStore.cashRegister += candy.price;
+                  candyStore.candies.amount=candy.amount-1;
+               }
+            });
+            console.log(candyStore.cashRegister,candyStore.candies.amount);
+         };
+         buy(candyStore,'as12f')
