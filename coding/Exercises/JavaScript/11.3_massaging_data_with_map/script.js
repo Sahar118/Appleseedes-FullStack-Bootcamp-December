@@ -41,36 +41,43 @@ const data = [
     },
     ];
 
-
-    // const returnsNames = data.forEach(function(data){
-    //     console.log(data.name);
-    // })
-
-    // 2
-  
-    // const dataBirthday = data.find(function(data){
-    //     const birthdata = data.birthday.split('-').join('[]');
-    //     console.log(birthdata);
-    //     return birthdata[2];
-    // })
-
-    const query = ' ';
-    const dataBirthday = data.find(function(data){
-        const birthdata = data.birthday.split('-').join(' ');
-        const querybirth= birthdata.includes(query.'1995')
-        console.log(birthdata);
-
+    // 1
+    const returnsNames = data.forEach(function(data){
+        console.log(data.name);
     })
 
-        // const bornBefore = data.filter(book =>{
-        // })
+    // 2
+    const funcBirthday=(array1)=>{
+        let array2=[];
+        array1.forEach(e=>{
+            if(parseInt(e.birthday.split('-')[2])<1990){
+                array2.push(e);
+            }
+            });
+            console.log(array2);
+        };
+        
+        funcBirthday(data);
 
-    // console.log(dataBirthday);
 
     // 3
 
-    // const allFood=data.map(function(foodPresent){
-    //     const foodmeats = foodPresent.meats;
-    //     const foodFiesh =
-    // })
-
+      
+    const funcObj = (array) =>{
+        let count = {} ;
+        array.map(e => {
+           let meatArray = e.favoriteFoods.meats;
+           let fishArray = e.favoriteFoods.fish;
+           let meatAndFishArray = meatArray.concat(fishArray);
+           meatAndFishArray.map(el=>{
+              if(count[el]){
+                 count[el]++;
+              }
+              else{
+                 count[el]=1;
+              }
+           });
+        });
+        console.log(count);
+     };
+     funcObj(data);
