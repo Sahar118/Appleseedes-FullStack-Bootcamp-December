@@ -56,6 +56,9 @@ const school = {
   
   
   
+
+// 2
+
   function assignStudent(id1, subject) {
     let moveStudent = school.students.find((person) => {
       return person.id.toString().includes(id1);
@@ -75,6 +78,11 @@ const school = {
   }
   assignStudent("10", "chemistry");
   
+
+
+
+
+
   
   
   function assignTeachersSubject(id2, newSubject) {

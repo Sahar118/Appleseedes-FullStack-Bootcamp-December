@@ -82,24 +82,36 @@
 // --------------------- Block 3  ---------------------------------
 // ----------------------------------------------------------------
 // function funcB() {
-//     let b =0;
-//     let a = 0;
-    
+//     
+//     let a = b= 0;
 //     a++;
 //     return a;
 //     }
 //     funcB();
-//     console.log(typeof a);
-//     console.log(typeof b);
+//     console.log(typeof a); undefind
+//     console.log(typeof b); number
+// b=> global 
+// a=>local
     
-    function funcB() {
-        let a = 1;
-        a++;
-        return a;
-        console.log(typeof a);
-        console.log(typeof b);
-    }
+function funcB() {
+    let a = b =0;
+    a++;
+    console.log(typeof a);
+
+    return a;
+}
     funcB();
+    console.log(typeof b);
+
+
+    // function funcB() {
+    //     let a = 1;
+    //     a++;
+    //     return a;
+    //     console.log(typeof a);
+    //     console.log(typeof b);
+    // }
+    // funcB();
         
 
 // ----------------------------------------------------------------
