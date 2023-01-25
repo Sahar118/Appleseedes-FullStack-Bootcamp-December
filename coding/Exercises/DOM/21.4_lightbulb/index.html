@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <img id="bulb-off" src="./bulb-off.jpg" alt="">
+    <img id="bulb-on" src="./bulb-on.jpg" alt="">
+
+    <button id="btn"> Turn on </button>
+    
+    <script>
+
+
+
+
+
+const button = document.querySelector('#btn');
+const bulbOff = document.querySelector('#bulb-off');
+const bulbON = document.querySelector('#bulb-on');
+
+btn.addEventListener('click', function(){
+    btn.innerText = 'Turn Of'
+    btn.style.backgroundColor = 'black'
+    btn.style.color = 'yellow'
+    bulbOff.style.visibility = "hidden";
+    bulbON.style.visibility = "visible";
+
+})
+btn.addEventListener('dblclick', function(){
+    btn.innerText = 'Turn On'
+    btn.style.backgroundColor = 'yellow'
+    btn.style.color = 'black'
+
+    bulbOff.style.visibility = "visible";
+    bulbON.style.visibility = "hidden";
+
+})
+
+
+
+
+    </script>
+</body>
+</html>
