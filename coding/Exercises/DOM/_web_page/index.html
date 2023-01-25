@@ -6,66 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://kit.fontawesome.com/17256ed60f.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/17256ed60f.js" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awsome/5.14.0/css/all.min.css" integrity="sha512-1pKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
 
-<h3> Double click on the image to <i class="fas fa-heart"></i>it </h3>
-<small>you Liked it <span id="times">0</span> times</small>
-<div class="loveMe"></div>
+<h3> Double click on the image to <i class="fa-heart fas"></i>it </h3>
+<small>you Liked it <span id="times"> 0 </span> times</small>
+<div id="loveMe"></div>
 
-    <script>
-
-const loveMe = document.querySelector('.LoveMe')
-const times = document.querySelector('#times')
-
-
-let timesClicked = 0
-let clickTime =0
-loveMe.addEventListener('click', (e)=>{
-
-
-    if(clickTime===0){
-        clickTime = new Date().getTime()
-        console.log(clickTime)
-    } else{
-        if((new Date().getTime() - clickTime)<800){
-           createHeart(e)
-           clickTime=0
-        } else{ 
-            clickTime = new Date().getTime()
-        }
-    }
-})
-const createHeart = (e) =>{
-    const heart = document.createElement('i')
-    heart.classList.add('fas')
-    heart.classList.add('fa-heart')
-
-    const x = e.clientX
-    const y = e.clientY
-
-    const leftOffset = e.target.offsetLeft
-    const topOffset = e.target.offsetTop
-
-    const xInside = x - leftOffset
-    const yInside = y - topOffset
-
-    heart.style.top = `${yInside}px`
-    heart.style.left = `${xInside}px`
-
-    loveMe.appendChild(heart)
-
-    times.innerHTML = ++timesClicked
-
-    setTimeout(()=> heart.remove(), 1000)
-
-}
-        
-
+    <script src="./script.js">
     </script>
 </body>
 </html>
