@@ -5,12 +5,14 @@ q1.innerText = 'main title';
 
 // 2
 
-const para = document.createElement("li");
+const subtitle = document.createElement("li");
 para.innerText = "sub title 4";
-document.body.querySelector('ul').appendChild(para);
+document.body.querySelector('ul').appendChild(subtitle);
+const firstUl = document.querySelector("ul li ul")
+firstUl.appendChild(subtitle)
 
 // 3
-const removeElement = document.querySelectorAll("li")[6];
+const removeElement = document.querySelectorAll("li")[7];
 removeElement.remove();
 
 // 4
