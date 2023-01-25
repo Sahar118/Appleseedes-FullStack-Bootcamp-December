@@ -1,0 +1,16 @@
+body{
+    height: 110vh;
+    width: 100%;
+    background-color: yellowgreen;
+}
+
+.container{
+    height: 200px;
+    width: 300px;
+    text-align: center;
+    background-color: violet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
