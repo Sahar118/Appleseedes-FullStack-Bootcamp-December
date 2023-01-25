@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Hols Amigos</p>
+    <div>
+        <button class="plus" >+</button>
+        <button class="minus" >-</button>
+    </div>
+
+<script>
+const p = document.querySelector('p');
+        const plus = document.querySelector('button[class=plus]');
+        const minus = document.querySelector('button[class=minus]');
+    let fontSize = 16;
+
+        function plusFunction () {
+        if(fontSize <100){
+            p.style.fontSize=`${fontSize++}px`;
+        }
+        };
+        function minusFunction () {
+        if(fontSize >6){
+            p.style.fontSize=`${fontSize--}px`;
+        }
+        };
+
+        plus.addEventListener('click',plusFunction);
+        minus.addEventListener('click',minusFunction);
+
+</script>
+</body>
+</html>
