@@ -1,27 +1,60 @@
-const label = document.querySelector('label');
-const input = document.querySelector('input');
+// const form = document.querySelector('#form');
+const random = document.querySelector('#random');
+// const guess = document.querySelector('#input-guess');
+const result = document.querySelector('#result');
+const fill = document.querySelector('#fill');
+const appear = document.querySelector('#play-again');
+let guessedLetters=[];
+let randomLetters=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+let status = true;
+let index = Math.floor(Math.random()*26)-1;
+let letter = randomLetters[index];
+appear.style.display='none';
+function guessMyLetter(event){
+   let input = event.key.toLowerCase();
+   checkLetter(input,letter)
+   addsToTheGuessedArray(input)
+}
 
+function addsToTheGuessedArray(i){
+   if(randomLetters.includes(i)){
+      if (!guessedLetters.includes(i)){
+         guessedLetters.push(i)
+         if(status){
+            fill.textContent = guessedLetters.join(',')
+         }
+      }
+   }
+}
 
+function checkLetter(char,l){
+   if(randomLetters.includes(char)&&status){
+      if(l===char&&status){
+         result.style.color='green';
+         result.textContent="Yep that's the right letter";
+         // guess.style.display='none'
+         random.textContent=char;
+         status = false;
+         appear.style.display='block';
+      }
+      else if (guessedLetters.includes(char)&&status){
+         result.style.color='blue';
+         result.textContent='already used this letter';
+      }
+      else{
+         result.style.color='red';
+         result.textContent="nope, that's wrong letter";
+      }
+   }
+   else if(!randomLetters.includes(char)){
+      result.style.color='yellow';
+      result.textContent="Only valid letters!";
+      
+   }
+}
 
-  function generateRandomLetter() {
-    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-    let randomLetter =   alphabet[Math.floor(Math.random() * alphabet.length)]
-    return randomLetter;
-  }
-
-  function guessTheNumber (){
-
-  }
-  
-  console.log(generateRandomLetter()) // "o"
-  console.log(generateRandomLetter()) // "X"
-  console.log(generateRandomLetter()) // "L"
-  console.log(generateRandomLetter()) // "J"
-  console.log(generateRandomLetter()) // "c"
-  console.log(generateRandomLetter()) // "A"
-
-  input.addEventListener('keypress', function(e){
-    if(e.key === 'randomLetter'){
-        e.key.style.color = 'red'; 
-    }
-  })
+appear.addEventListener('click',()=>{document.location.reload()})
+document.addEventListener('keyup',guessMyLetter)
+// document.addEventListener('keyup',()=>{
+//    console.log(event.key);
+// })
