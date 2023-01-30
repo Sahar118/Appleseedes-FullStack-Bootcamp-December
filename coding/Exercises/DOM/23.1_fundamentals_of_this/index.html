@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// <!-- Question 1:
+// In your own words what will this point to and why?
+// (Note this is the global scope) -->
+console.log(this);
+// / When we used log outside of any function scope, it also equals to the global object
+
+
+
+// <!-- 
+// Question 2:
+// a. In your own words what will this point to and why?
+const myObj = {
+    name: "Timmy",
+    greet: () => {
+        console.log(`Hello ${this.name}`);
+    },
+};
+
+// in this example we used arrow function as a method, it will return only Hello, {this.name} won't return any thing, 
+// becouse arrow function reference to the global scope.
+// we fix it by using traditional function 
+
+myObj.greet();
+// b. How can you fix this code? -->
+const myObjFixed = {
+name: "Timmy",
+greet() {
+console.log(`Hello ${this.name}`);
+},
+};
+myObjFixed.greet();
+
+
+
+
+
+
+// Question 3:
+// In your own words what will this point to and why? -->
+const myFuncDec = function () {
+    console.log(this);
+};
+
+// this in this function refer to the window
+
+
+
+// Question 4:
+// In your own words what will this point to and why? -->
+const myFuncArrow = () => {
+console.log(this);
+};
+myFuncArrow();
+// its Arrow function, it reference to tha global scope / wendow
+
+
+
+// <!-- Question 5:
+// a. In your own words, what will this point to and why?
+// b. How can you fix this code? -->
+document.querySelector(".element").addEventListener('click',function() {console.log(this);
+});
+//*  this will point to the window because of the arrow function..., to fix it we can by replacing the arrow function by declartion function.
+    </script>
+</body>
+</html>
