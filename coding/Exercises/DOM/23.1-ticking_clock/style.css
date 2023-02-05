@@ -1,0 +1,45 @@
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+    position: relative;
+
+}
+.tic1 {
+    position: absolute;
+    top: 50px;
+    left: 230px;
+    background-color: gold;
+    width: 10px;
+    height: 230px;
+    border-radius: 5px;
+
+}
+
+.tic2 {
+    position: absolute;
+    top: 110px;
+    left: 230px;
+    background-color:black;
+    width: 10px;
+    height: 170px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.tic3 {
+    position: absolute;
+    top: 160px;
+    left: 230px;
+    background-color: red;
+    width: 5px;
+    height: 120px;
+    border-radius: 5px;
+}
+
+
