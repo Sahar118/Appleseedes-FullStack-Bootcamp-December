@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click Here</button>
+    <h1 id="joke-title"></h1>
+    <h4 id="joke-text"></h4>
+    <script>
+
+const button = document.getElementById('btn');
+const title = document.querySelector('#joke-title');
+const joke = document.querySelector('#joke-text');
+
+
+button.addEventListener('click',getData);
+
+function getData(){
+   fetch('https://api.jokes.one/jod')
+   .then(result=>result.json())
+   .then(res=>{
+      const titleText = res.contents.jokes[0].joke.title;
+      const jokeText = res.contents.jokes[0].joke.text;
+      title.innerHTML = titleText;
+      joke.innerHTML = jokeText;
+   })
+   .catch(res=>console.log(res,'Failed to load', 404))
+}
+    </script>
+</body>
+</html>
