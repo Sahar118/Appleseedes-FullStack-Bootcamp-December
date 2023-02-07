@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub API</title>
+</head>
+<body>
+    <div id="output"></div>
+    <input type="text" id="searchProfile">
+    <input type="submit" value="submit">
+    
+    <button id="getText1">Search </button>
+
+    <!-- <div id="avatarImg"></div>
+    <div id="UserName"></div>
+    <div id="orepoNum"></div>
+ -->
+
+    <script>
+        document.getElementById('searchProfile').addEventListener('submit', searchProfile )
+
+        // function searchProfile(e){
+        //     e.preventDefault();
+
+            
+        //     fetch('https://api.github.com/users/${username}',{
+        //         method:
+        //     })
+            
+            
+        
+        // document.getElementById('getText1').addEventListener('click', getText1)
+        // function getText1() {
+            //     fetch('sample.txt')
+        //     .then((res) => res.text())
+        //     .then((data) => console.log(data))
+        // }
+        // getText1()
+        
+        // document.getElementById('getText1').addEventListener('click', getText1)
+        // function getText1() {
+            //     fetch('https://api.github.com/users/Sahar118')
+            //     .then((res) => res.text())
+            //     .then((data) => {
+                //         console.log(data);
+                //         // document.getElementById('output').innerHTML =data;
+        //     })
+        //     .catch((err) =>console.error(err))
+        // }
+        // getText1()
+        
+        // document.getElementById('getUsers').addEventListener('click', getUsers)
+        
+        async function getUsers() {
+            try{
+                const searchInput = document.getElementById('input').value;
+                let res = await fetch(`https://api.github.com/users/${inputValue}`)
+                let data = await res.json()
+                document
+              .querySelector(".avatar-image")
+              .setAttribute("src", `${data.avatar_url}`);
+            document.querySelector(".user-name").innerText = data.login;
+            document.querySelector(".num-repos").innerText = data.public_repos;
+            document
+              .querySelector("#github-link")
+              .setAttribute("href", `https://github.com/${inputValue}`);
+          } catch (error) {
+            console.error(error);
+          }
+            }
+
+        </script>
+</body>
+</html>
