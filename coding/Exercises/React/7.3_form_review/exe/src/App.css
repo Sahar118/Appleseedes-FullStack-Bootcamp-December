@@ -1,0 +1,34 @@
+.App {
+  text-align: left;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input{
+display: flex;
+/* margin-top: 20px; */
+}
+
+input{
+  width:200px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+
+.first-name,
+.last-name,
+.select-tag,
+.textarea-tag
+{
+  margin: 5px;
+
+}

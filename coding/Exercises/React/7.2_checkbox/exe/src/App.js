@@ -58,10 +58,6 @@ const App = () => {
         />
         I accept the tern of the app
       </label>
-
-
-
-
     </div>
   );
 };

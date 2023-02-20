@@ -1,17 +1,11 @@
-import React, { useState } from 'react'
+import Counter from './component/Counter';
 import './App.css';
 
 
-function App(props) {
-  const [number, setNumber] = useState(props.number);
-  const clickHandler = () => {
-    setNumber(number + 1);
-    console.log(number);
-  }
+function App() {
   return (
     <div className="App">
-      <h3> {number}</h3>
-      <button onClick={clickHandler}>increment</button>
+      <Counter currNumber={3}> </Counter>
     </div>
   );
 }
