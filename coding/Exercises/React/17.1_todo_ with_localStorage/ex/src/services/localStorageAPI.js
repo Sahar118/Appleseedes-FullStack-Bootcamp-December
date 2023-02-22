@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 
 function TodoList() {
-  const [iDidIT, setIDidIT] = useState(false);
 
   const [todos, setTodos] = useState([]);
   const [newTodoText, setNewTodoText] = useState("");
@@ -15,18 +14,23 @@ function TodoList() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("iDidIt", JSON.stringify(iDidIT));
-  }, [iDidIT]);
-
-  useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
   const addTodo = () => {
-    setTodos((todos) => [...todos, { id: Date.now(), text: newTodoText }]);
+    setTodos((todos) => [...todos, { id: Date.now(), text: newTodoText, done: false }]);
     setNewTodoText("");
   };
 
+  const handelDone = (id) => {
+    setTodos((todos) => todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, done: !todo.done }
+      } else {
+        return todo
+      }
+    }))
+  }
   const handleNewTodoTextChange = (event) => {
     setNewTodoText(event.target.value);
   };
@@ -37,6 +41,7 @@ function TodoList() {
 
   return (
     <div className="App">
+
       <h1>Todo List</h1>
       <div className="add-todo">
         <input
@@ -50,7 +55,7 @@ function TodoList() {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            onClick={() =>}
+            <span onClick={() => { handelDone(todo.id) }}>{todo.done ? '😊' : '😕'}{todo.text}</span>
             <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
           </li>
         ))}
