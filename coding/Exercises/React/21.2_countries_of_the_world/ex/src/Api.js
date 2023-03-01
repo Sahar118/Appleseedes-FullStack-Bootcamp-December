@@ -1,30 +1,31 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
-export default class PersonList extends React.Component {
+export default class CountryList extends React.Component {
     state = {
-        countryName: []
-    }
+        countries: [],
+    };
 
     componentDidMount() {
-        axios.get(`https://restcountries.com/v3.1/all`)
-            .then(res => {
-                const countryName = res.data;
-                this.setState({ countryName });
-            })
+        axios.get(`https://restcountries.com/v3.1/all`).then((res) => {
+            const countries = res.data;
+            this.setState({ countries: countries });
+        });
     }
 
     render() {
         return (
             <ul>
-                {
-                    this.state.countryName
-                        .map(countryName =>
-                            <li key={countryName.id}>{countryName.name}</li>
-                        )
-                }
+                {this.state.countries
+                    .filter((country) =>
+                        country.name.common
+                            .toLowerCase()
+                            .includes(this.props.filterString.toLowerCase())
+                    )
+                    .map((country, index) => (
+                        <li key={index}>{country.name.official}</li>
+                    ))}
             </ul>
-        )
+        );
     }
 }
-

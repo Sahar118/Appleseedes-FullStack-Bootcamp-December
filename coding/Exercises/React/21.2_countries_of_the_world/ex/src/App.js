@@ -1,10 +1,10 @@
-import PersonList from './Api'
+import CountryList from './Api'
 import './App.css';
 
 function App() {
   return (
     <>
-      <PersonList />
+      <CountryList />
     </>
   );
 }
